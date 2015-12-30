@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Avenir';
+  font-style: lighter;
+  font-weight: 100;
+  src: url("fonts/Avenir LT Std 35 Light/AvenirLTStd-Light.otf"); }
+
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  src: url("fonts/Avenir LT Std 65 Medium/AvenirLTStd-Medium.otf"); }
+
+@font-face {
+  font-family: 'Avenir';
+  font-style: bold;
+  font-weight: 800;
+  src: url("fonts/Avenir LT Std 85 Heavy/AvenirLTStd-Heavy.otf"); }
+
+a {
+  border-bottom: 5px solid #5f8878;
+  padding: 0 0 10px;
+  &:hover {
+    border-bottom: 5px solid #4e5356;
+  }
+}
+
+.intro {
+  margin: 80px 0 150px;
+}
+
+.logo {
+  display: block;
+  margin: 100px auto 0;
+  width: 200px;
+  transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  transition: all 0.1s ease-in-out 0s;
+  -ms-transition: all 0.1s ease-in-out 0s;
+  -webkit-transition: all 0.1s ease-in-out 0s;
+  &:hover {
+    transform: scale(1.2) rotate(-13deg);
+    -ms-transform: scale(1.2) rotate(-13deg);
+    -webkit-transform: scale(1.2) rotate(-13deg);
+    transition: all 0.1s ease-in-out 0s;
+    -ms-transition: all 0.1s ease-in-out 0s;
+    -webkit-transition: all 0.1s ease-in-out 0s; 
+  }
+}
+
+.portfolio {
+  p {
+    font-size: 1rem;
+  }
+}
+
+.site-footer {
+  margin: 100px auto 120px;
+}
+
+.push-bottom {
+  margin-bottom: 1.5rem;
+}
+
+.soft-bottom {
+  padding-bottom: 1.5rem;
+}

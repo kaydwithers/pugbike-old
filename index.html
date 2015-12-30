@@ -92,31 +92,53 @@
       </div>
     </div>
 
-    <div class="reveal" id="exampleModal1" data-reveal data-close-on-click="true" data-animation-in="hingeInFromMiddleX" data-animation-out="spin-out">
-      <form>
+    <div class="reveal" id="exampleModal1" data-reveal data-close-on-click="true" data-animation-in="spin-in" data-animation-out="spin-out">
+      <form data-abide novalidate action="send_message.php" id="contact-form" class="form-horizontal" role="form" method="post">
         <div class="row">
           <div class="large-12 columns">
-            <label>Your Name</label>
-            <input type="text" placeholder="Yoda" />
+
+            <div id="contactMessageSuccess">
+              <div data-abide-success class="success callout" style="display: none;">
+                Thanks for contacting us. We'll be in touch soon.
+              </div>
+            </div>
+
+            <div id="contactMessageError">
+              <div data-abide-error class="alert callout" style="display: none;">
+                There are some errors in your form.
+              </div>
+            </div>
+
+            <label>
+              Your Name
+              <input type="text" placeholder="Yoda" name="name" id="form-name" required>
+              <span class="form-error">This field is required.</span>
+            </label>
           </div>
         </div>
         <div class="row">
           <div class="large-12 columns">
-            <label>Your Email</label>
-            <input type="email" placeholder="yoda@dagobah.com" />
+            <label>
+              Your Email
+              <input type="email" placeholder="yoda@dagobah.com" name="email" id="form-email" required>
+              <span class="form-error">This field is required.</span>
+            </label>
           </div>
         </div>
         <div class="row">
           <div class="large-12 columns">
-            <label>Your Message</label>
-            <textarea placeholder="Lost a planet Master Obi-Wan has. How embarrassing..."></textarea>
+            <label>
+              Your Message
+              <textarea placeholder="Lost a planet Master Obi-Wan has. How embarrassing..." name="message" id="form-message" required></textarea>
+              <span class="form-error">This field is required.</span>
+            </label>
           </div>
         </div>
         <div class="row">
           <div class="large-12 columns">
-            <a href="#" class="large success button">Send</a><br/>
+            <button type="submit" class="large success button">Send</button>
           </div>
-          <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <button class="close-button" data-close aria-label="Close reveal" type="submit">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -136,5 +158,7 @@
     <script src="bower_components/what-input/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/contact-form.js"></script>
+
   </body>
 </html>
